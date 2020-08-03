@@ -70,7 +70,7 @@ function objectifyDocument(
         get: (fieldPath: string) => {
             return getField(mappedObjectToInclude, fieldPath);
         },
-        ref: firebase.firestore().doc(path),
+        ref: firestore.doc(path),
         isEqual(other: firebase.firestore.DocumentSnapshot): boolean {
             return documentIsEqual(id, mappedObjectToInclude, other);
         },
